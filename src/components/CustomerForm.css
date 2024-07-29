@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #caf0f8;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+  .container {
+    display: grid;
+    grid-template-rows: 80px auto 1fr auto 20px;
+    grid-template-columns: 1fr 4fr 1fr;
+    height: 100vh;
+    grid-template-areas:
+        "header        header        header"
+        "left-aside   banner        right-aside"
+        "left-aside    main          right-aside"
+        "left-aside    low-content   right-aside"
+        "footer        footer        footer";
+    grid-gap: 10px;  padding: 10px;
+  }
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: header;
+    background-color: #03045e;
+    color: #caf0f8;  
+    text-align: center;
+    font-size: 32px;
+}
+
+.banner {
+    grid-area: banner;
+    background-color: #023e8a;
+    color: #caf0f8;
+    border-radius: 1rem;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.main {
+    grid-area: main;
+    background-color: #caf0f8;
+    padding: 20px;
+}
+
+#panNo{
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #90e0ef;
+    height: 2rem;
+    width: 40rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    border-radius: 0.4rem;
+    border: none;
+}
+
+.verifyPan{
+    font-family: "Poppins", sans-serif;
+    border: none;
+    background-color: #023e8a;
+    padding: 0.5rem;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    color: #caf0f8;
+    border-radius: 0.4rem;
+}
+
+#name, #email, #mobile, #state, #city, #postcode{
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #90e0ef;
+    height: 2rem;
+    width: 40rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    border-radius: 0.4rem;
+    border: none;
+}
+
+#address{
+    font-family: "Poppins", sans-serif;
+    background-color: #90e0ef;
+    height: 8rem;
+    width: 40rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    border-radius: 0.4rem;
+    border: none;
+}
+
+.pan, .personal{
+    margin: 0 10rem 4rem 10rem;
+}
+
+.addresses{
+    margin: 0 10rem 0 10rem;
+}
+
+h3{
+    margin-bottom: 2rem;
+}
+
+.low-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: low-content;
+    background-color: #023e8a;
+    color: #caf0f8;
+    font-size: 1.5rem;
+    border-radius: 5rem;
+    height: 2.5rem;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: footer;
+    color: #caf0f8;
+    background-color: #03045e;
+    padding: 2rem;
+    font-size: 0.72rem;
+}
+
+@media (max-width: 678px) {
+    .container {
+      display: grid;
+      grid-template-rows: 50px 50px 1fr 50px 20px;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "header"
+        "banner"
+        "main"
+        "low-content"
+        "footer";
+    }
+  }
+  
