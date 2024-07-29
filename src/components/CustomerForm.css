@@ -40,7 +40,7 @@ body {
 .banner {
     grid-area: banner;
     background-color: #023e8a;
-    color: #caf0f8;
+    color: #ffffff;
     border-radius: 1rem;
     padding: 20px;
     text-align: center;
@@ -49,7 +49,8 @@ body {
 
 .main {
     grid-area: main;
-    background-color: #caf0f8;
+    background-color: #00b4d8;
+    border-radius: 1rem;
     padding: 20px;
 }
 
@@ -67,7 +68,7 @@ body {
     border: none;
 }
 
-.verifyPan{
+#verifyPan, #addressbutton{
     font-family: "Poppins", sans-serif;
     border: none;
     background-color: #023e8a;
@@ -97,34 +98,60 @@ body {
     height: 8rem;
     width: 40rem;
     padding: 0.5rem;
-    margin: 0.5rem 0.5rem 0.5rem 0;
+    margin: 0.72rem 0 0.72rem 0;
     border-radius: 0.4rem;
     border: none;
 }
 
-.pan, .personal{
+.pan, .personal, .addresses{
+    background-color: #00b4d8;
     margin: 0 10rem 4rem 10rem;
 }
 
-.addresses{
-    margin: 0 10rem 0 10rem;
+.pan{
+    margin-top: 2rem;
 }
 
-h3{
-    margin-bottom: 2rem;
+.personalDetails, .address{
+    background-color: #00b4d8;
 }
 
-.low-content {
+h2{
+    color:#03045e;
+    background-color: #00b4d8;
+    margin: 2.4rem 0 2rem 0;
+}
+
+h4{
+    color: #ffffff;
+    background-color: #00b4d8;
+}
+
+.low-content{
     display: flex;
     align-items: center;
     justify-content: center;
     grid-area: low-content;
     background-color: #023e8a;
-    color: #caf0f8;
+    color: #ffffff;
     font-size: 1.5rem;
     border-radius: 5rem;
     height: 2.5rem;
+}
+
+#submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: low-content;
+    background-color: #023e8a;
+    color: #ffffff;
+    font-size: 1.5rem;
+    border-radius: 5rem;
+    height: 2.5rem;
+    width: 80rem;
     cursor: pointer;
+    border: none;
 }
 
 .footer {
