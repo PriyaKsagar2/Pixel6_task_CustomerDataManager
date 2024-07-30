@@ -38,12 +38,23 @@ body {
 }
 
 .banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     grid-area: banner;
+    background-color: #caf0f8;
+
+}
+
+#banner{
+    font-family: "Poppins", sans-serif;
+    border: none;
     background-color: #023e8a;
-    color: #ffffff;
-    border-radius: 1rem;
-    padding: 20px;
-    text-align: center;
+    padding: 1.6rem;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    color: #caf0f8;
+    border-radius: 0.4rem;
+    cursor: pointer;
     font-size: 24px;
 }
 
@@ -182,14 +193,22 @@ h4{
   @media (max-width: 678px){
 
     .header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         height: 10rem;
         font-size: 5rem;
     }
 
     .banner{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         height: 8rem;
+        width: 88%;
+        border-radius: 2rem;
         font-size: 4rem;
-        margin-top: 7.5rem;
+        margin: 7.5rem 6rem 0 6rem;
     }
 
     .main{
@@ -215,10 +234,18 @@ h4{
         width: 80rem;
         height: 16rem;
         border-radius: 2rem;
+        font-size: 2.4rem;
     }
 
     #verifyPan, #addressbutton{
         width: 24rem ;
+        height: 8rem;
+        border-radius: 2rem;
+        font-size: 3rem
+    }
+
+    #banner{
+        width: auto ;
         height: 8rem;
         border-radius: 2rem;
         font-size: 3rem
@@ -231,14 +258,13 @@ h4{
     .low-content, #submit{
         font-size: 4rem;
         height: 8rem;
+        width: 88%;
+        margin: auto;
     }
 
     .footer{
-        height: 4rem;
+        height: 5rem;
         margin-top: 4.8rem;
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
   }
-
-
-  

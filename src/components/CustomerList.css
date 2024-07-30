@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap");
+
+*{
+  font-family: "Poppins", sans-serif;
+}
+
+.customer-list{
+  background-color: #00b4d8;
+  border-radius: 2rem;
+}
+
+.customer-list h3{
+  background-color: #00b4d8;
+  color: #03045e;
+  font-size: 1.6rem;
+  padding-bottom: 1rem;
+}
+
+.customerInfo p{
+  margin: 1rem;
+  color: #03045e;
+}
+
+.edit{
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 40rem;
+  padding: 0.5rem;
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border-radius: 0.4rem;
+  border: none;
+  font-size: 1rem;
+  background-color: #90e0ef;
+  color: #03045e;
+}
+
+  
+#edit, #delete, #save, #cancel, #addressbutton2{
+  font-family: "Poppins", sans-serif;
+  border: none;
+  background-color: #023e8a;
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+  color: #caf0f8;
+  border-radius: 0.4rem;
+  width: 8rem;
+  height: 2.4rem;
+  font-size: 1rem;
+}
+
+
+@media (max-width: 678px){
+  .customer h4{
+    font-size: 1rem;
+  }
+
+  .edit{
+    width: 80rem;
+    height: 8rem;
+    border-radius: 2rem;
+    font-size: 2.4rem;
+  }
+
+  #save, #cancel{
+    width: 24rem ;
+    height: 8rem;
+    border-radius: 2rem;
+    font-size: 3rem
+  }
+}

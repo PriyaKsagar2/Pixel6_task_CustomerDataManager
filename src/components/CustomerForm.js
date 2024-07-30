@@ -1,16 +1,17 @@
 import "./CustomerForm.css";
 import React, { useState } from 'react';
 import axios from 'axios';
+import CustomerList from './CustomerList';
 
 function CustomerForm() {
-  // State management
   const [pan, setPan] = useState('');
   const [isPanValid, setIsPanValid] = useState(false);
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [mobile, setMobile] = useState('');
   const [addresses, setAddresses] = useState([{ line1: '', line2: '', postcode: '', state: '', city: '' }]);
-  const [customerList, setCustomerList] = useState([]);
+  const [customerList, setCustomerList] = useState(JSON.parse(localStorage.getItem('customerList')) || []);
+  const [showCustomerList, setShowCustomerList] = useState(false);
 
   // Handle PAN input change
   const handlePanChange = (e) => {
@@ -34,7 +35,7 @@ function CustomerForm() {
       setIsPanValid(false);
       alert('PAN not verified');
     }
-  };
+  };  
 
   // Handle adding a new address
   const addAddress = () => {
@@ -45,8 +46,8 @@ function CustomerForm() {
     }
   };
 
-   // Handle address input change
-   const handleAddressChange = (index, field, value) => {
+  // Handle address input change
+  const handleAddressChange = (index, field, value) => {
     const newAddresses = [...addresses];
     newAddresses[index][field] = value;
     setAddresses(newAddresses);
@@ -77,114 +78,111 @@ function CustomerForm() {
     const newCustomerList = [...customerList, customer];
     setCustomerList(newCustomerList);
 
-    // Optionally, save to localStorage or Redux
     localStorage.setItem('customerList', JSON.stringify(newCustomerList));
-
-    // Navigate to customer list page (example implementation)
-    // history.push('/customer-list');
+    setShowCustomerList(true);
   };
 
   return (
     <div className="container">
       <header className="header">Customer Data Manager</header>
-      <section className="banner">Customer Details</section>
 
-      <main className="main">
-        {/* PAN number */}
-        <div className="pan">
-          <h2>PAN Number</h2>
-          <h4>Enter valid PAN:</h4>
-          <input
-            type="text"
-            id="panNo"
-            value={pan}
-            onChange={handlePanChange}
-            placeholder="Enter valid PAN number"
-          />
-          <button id="verifyPan" onClick={handleVerifyClick}>Verify</button>
-        </div>
-
-        {/* Personal details of customer */}
-        <div className="personal">
-          <h2> Personal Details</h2>
-          <div className="personalDetails">
-            <h4>Full name:</h4>
-            <input type="text" id="name" value={fullName} placeholder="Enter your full name" readOnly/>
-            <h4>Email id:</h4>
-            <input
-              type="email"
-              id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter email id"
-              required
-              maxLength="255"
-            />
-            <h4>Mobile No:</h4>
-            <input
-              type="tel"
-              id="mobile"
-              value={mobile}
-              onChange={(e) => setMobile(e.target.value)}
-              pattern="\+91[0-9]{10}"
-              required
-              maxLength="13"
-              placeholder="+91xxxxxxxxxx"
-            />
-          </div>
-        </div>
-
-        {/* Address of the customer */}
-        <div className="addresses">
-          {addresses.map((address, index) => (
-            <div className="address" key={index}>
-            <h2>Address {index + 1}</h2>
-              {/* Address lines */}
-              <h4>Address line 1:</h4>
-              <input
-                type="text"
-                id="address"
-                value={address.line1}
-                onChange={(e) => handleAddressChange(index, 'line1', e.target.value)}
-                required
-                maxLength="700"
-              />
-              <h4>Address line 2:</h4>
-              <input
-                type="text"
-                id="address"
-                value={address.line2}
-                onChange={(e) => handleAddressChange(index, 'line2', e.target.value)}
-                maxLength="700"
-              />
-
-              {/* PIN code, state and city */}
-              <h4>Post Code:</h4>
-              <input
-                type="number"
-                value={address.postcode}
-                id="postcode"
-                onChange={(e) => handlePostcodeChange(index, e.target.value)}
-                placeholder="Select valid Post Code"
-                required
-                maxLength="6"
-              />
-              <h4>State:</h4>
-              <input id="state" type="text" placeholder="State" value={address.state} readOnly />
-              <h4>City:</h4>
-              <input id="city" type="text" placeholder="City" value={address.city} readOnly />
-            </div>
-          ))}
-          <button id="addressbutton" onClick={addAddress}>Add Address</button>
-        </div>
-      </main>
-
-      {/* Save/Submit button */}
-      <section className="low-content">
-        <button id="submit" onClick={handleSubmit}>Submit</button>
+      {/* Banner with navigation buttons */}
+      <section className="banner">
+        <button id="banner" onClick={() => setShowCustomerList(false)}>Customer Details</button>
+        <button id="banner" onClick={() => setShowCustomerList(true)}>Customer List</button>
       </section>
 
-      {/* Footer */}
+      <main className="main">
+
+        {!showCustomerList ? (
+          <>
+            <div className="pan">
+              <h2>PAN Number</h2>
+              <h4>Enter valid PAN:</h4>
+              <input
+                type="text"
+                id="panNo"
+                value={pan}
+                onChange={handlePanChange}
+                placeholder="Enter valid PAN number"
+              />
+              <button id="verifyPan" onClick={handleVerifyClick}>Verify</button>
+            </div>
+            <div className="personal">
+              <h2>Personal Details</h2>
+              <div className="personalDetails">
+                <h4>Full name:</h4>
+                <input type="text" id="name" value={fullName} placeholder="Your name according to PAN id" readOnly />
+                <h4>Email id:</h4>
+                <input
+                  type="email"
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter email id"
+                  required
+                  maxLength="255"
+                />
+                <h4>Mobile No:</h4>
+                <input
+                  type="tel"
+                  id="mobile"
+                  value={mobile}
+                  onChange={(e) => setMobile(e.target.value)}
+                  pattern="\+91[0-9]{10}"
+                  required
+                  maxLength="13"
+                  placeholder="+91xxxxxxxxxx"
+                />
+              </div>
+            </div>
+            <div className="addresses">
+              {addresses.map((address, index) => (
+                <div className="address" key={index}>
+                  <h2>Address {index + 1}</h2>
+                  <h4>Address line 1:</h4>
+                  <input
+                    type="text"
+                    id="address"
+                    value={address.line1}
+                    onChange={(e) => handleAddressChange(index, 'line1', e.target.value)}
+                    required
+                    maxLength="700"
+                  />
+                  <h4>Address line 2:</h4>
+                  <input
+                    type="text"
+                    id="address"
+                    value={address.line2}
+                    onChange={(e) => handleAddressChange(index, 'line2', e.target.value)}
+                    maxLength="700"
+                  />
+                  <h4>Post Code:</h4>
+                  <input
+                    type="number"
+                    value={address.postcode}
+                    id="postcode"
+                    onChange={(e) => handlePostcodeChange(index, e.target.value)}
+                    placeholder="Select valid Post Code"
+                    required
+                    maxLength="6"
+                  />
+                  <h4>State:</h4>
+                  <input id="state" type="text" placeholder="State" value={address.state} readOnly />
+                  <h4>City:</h4>
+                  <input id="city" type="text" placeholder="City" value={address.city} readOnly />
+                </div>
+              ))}
+              <button id="addressbutton" onClick={addAddress}>Add Address</button>
+            </div>
+          </>
+        ) : (
+          <CustomerList customers={customerList} setCustomers={setCustomerList} />
+        )}
+      </main>
+      <section className="low-content">
+        {!showCustomerList && <button id="submit" onClick={handleSubmit}>Submit</button>}
+      </section>
       <footer className="footer">
         @ created using ReactJS by Priya Kishor Kshirsagar
       </footer>
