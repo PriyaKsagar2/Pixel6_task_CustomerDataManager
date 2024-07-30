@@ -178,4 +178,67 @@ h4{
         "footer";
     }
   }
+
+  @media (max-width: 678px){
+
+    .header{
+        height: 10rem;
+        font-size: 5rem;
+    }
+
+    .banner{
+        height: 8rem;
+        font-size: 4rem;
+        margin-top: 7.5rem;
+    }
+
+    .main{
+        margin-top: 13rem;
+    }
+
+    h2{
+        font-size: 4rem;
+    }
+
+    h4{
+        font-size: 3rem;
+    }
+
+    #panNo, #name, #email ,#mobile, #postcode, #state, #city{
+        width: 80rem;
+        height: 8rem;
+        border-radius: 2rem;
+        font-size: 2.4rem;
+    }
+
+    #address{
+        width: 80rem;
+        height: 16rem;
+        border-radius: 2rem;
+    }
+
+    #verifyPan, #addressbutton{
+        width: 24rem ;
+        height: 8rem;
+        border-radius: 2rem;
+        font-size: 3rem
+    }
+
+    .pan, .personal, .addresses{
+        margin: 6rem 4rem 8rem 4rem;
+    }
+
+    .low-content, #submit{
+        font-size: 4rem;
+        height: 8rem;
+    }
+
+    .footer{
+        height: 4rem;
+        margin-top: 4.8rem;
+        font-size: 1.6rem;
+    }
+  }
+
+
   
