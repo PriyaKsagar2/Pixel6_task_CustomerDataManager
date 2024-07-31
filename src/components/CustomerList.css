@@ -4,41 +4,36 @@
   font-family: "Poppins", sans-serif;
 }
 
-.customer-list{
-  background-color: #00b4d8;
-  border-radius: 2rem;
+table {
+  border-collapse: collapse; /* To ensure clean table borders */
 }
 
-.customer-list h3{
-  background-color: #00b4d8;
+td, th {
+  border: 2.4px solid #03045e; /* Adjust border style and color as needed */
   color: #03045e;
-  font-size: 1.6rem;
-  padding-bottom: 1rem;
+  padding: 4px;
 }
 
-.customerInfo p{
-  margin: 1rem;
-  color: #03045e;
+td{
+  font-size: 0.8rem;
+  height: 127px;
+}
+
+.table{
+  background-color: #00b4d8;
 }
 
 .edit{
-  font-family: "Poppins", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 2rem;
-  width: 40rem;
-  padding: 0.5rem;
-  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
-  border-radius: 0.4rem;
   border: none;
-  font-size: 1rem;
-  background-color: #90e0ef;
-  color: #03045e;
+  width: 180px;
+  height: 127px;
 }
 
-  
-#edit, #delete, #save, #cancel, #addressbutton2{
+.editAdd{
+  height: 25px;
+}
+
+#edit, #delete, #save, #cancel, #editAdd{
   font-family: "Poppins", sans-serif;
   border: none;
   background-color: #023e8a;
@@ -50,20 +45,9 @@
   font-size: 1rem;
 }
 
-
 @media (max-width: 678px){
-  .customer h4{
-    font-size: 1rem;
-  }
-
-  .edit{
-    width: 80rem;
-    height: 8rem;
-    border-radius: 2rem;
-    font-size: 2.4rem;
-  }
-
-  #save, #cancel{
+  
+  #save, #cancel, #editAdd{
     width: 24rem ;
     height: 8rem;
     border-radius: 2rem;
