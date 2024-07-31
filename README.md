@@ -10,13 +10,13 @@
 <br>
 
 #### Customer Form
-https://github.com/PriyaKsagar2/Pixel6_task_CustomerDataManager/blob/master/readme%20images/localhost_3000_.png
+![Image 1](https://github.com/PriyaKsagar2/Pixel6_task_CustomerDataManager/blob/master/readme%20images/localhost_3000_.png)
 
 #### Customer details list
-https://github.com/PriyaKsagar2/Pixel6_task_CustomerDataManager/blob/master/readme%20images/Screenshot%20(1957).png"
+![Image 2](https://github.com/PriyaKsagar2/Pixel6_task_CustomerDataManager/blob/master/readme%20images/Screenshot%20(1957).png)
 
 #### Editing features
-https://github.com/PriyaKsagar2/Pixel6_task_CustomerDataManager/blob/master/readme%20images/Screenshot%20(1958).png
+![Image 3](https://github.com/PriyaKsagar2/Pixel6_task_CustomerDataManager/blob/master/readme%20images/Screenshot%20(1958).png)
 
 #### Website link 
 link: https://pixel6-task-customer-data-manager.vercel.app/
