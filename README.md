@@ -7,9 +7,8 @@
 </div>
 
 ### Customer details, Customer details list, and Edit features
-<br>
 
-#### Customer Form
+#### Customer details form
 ![Image 1](https://github.com/PriyaKsagar2/Pixel6_task_CustomerDataManager/blob/master/readme%20images/localhost_3000_.png)
 
 #### Customer details list
