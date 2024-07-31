@@ -8,13 +8,17 @@
 
 ### Customer details, Customer details list, and Edit features
 
-#### Customer details form
+#### Customer details form:
 ![Image 1](https://github.com/PriyaKsagar2/Pixel6_task_CustomerDataManager/blob/master/readme%20images/localhost_3000_.png)
 
-#### Customer details list
+<br>
+
+#### Customer details list:
 ![Image 2](https://github.com/PriyaKsagar2/Pixel6_task_CustomerDataManager/blob/master/readme%20images/Screenshot%20(1957).png)
 
-#### Editing features
+<br>
+
+#### Editing features:
 ![Image 3](https://github.com/PriyaKsagar2/Pixel6_task_CustomerDataManager/blob/master/readme%20images/Screenshot%20(1958).png)
 
 #### Website link 
