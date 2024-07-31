@@ -6,28 +6,6 @@
     </p>
 </div>
 
-### Customer details, Customer details list, and Edit features
-<br>
-
-#### Customer details form:
-![Image 1](https://github.com/PriyaKsagar2/Pixel6_task_CustomerDataManager/blob/master/readme%20images/localhost_3000_.png)
-
-<br>
-
-#### Customer details list:
-![Image 2](https://github.com/PriyaKsagar2/Pixel6_task_CustomerDataManager/blob/master/readme%20images/Screenshot%20(1957).png)
-
-<br>
-
-#### Editing features:
-![Image 3](https://github.com/PriyaKsagar2/Pixel6_task_CustomerDataManager/blob/master/readme%20images/Screenshot%20(1958).png)
-
-#### Website link 
-link: https://pixel6-task-customer-data-manager.vercel.app/
-
-### Built using 
-ReactJS
-
 ## Description
 
 This customer data management project is a React-based web application designed to manage customer information efficiently. It includes features for adding, editing, and deleting customer data, focusing on ensuring data validity through various input constraints. The project is deployed using Vercel for easy access and management.
@@ -62,6 +40,28 @@ This customer data management project is a React-based web application designed 
 
 7. **Deployment**:
    - Hosted on Vercel for easy access and management.
+
+#### Website link 
+link: https://pixel6-task-customer-data-manager.vercel.app/
+
+### Built using 
+ReactJS
+
+### Customer details, Customer details list, and Edit features
+<br>
+
+#### Customer details form:
+![Image 1](https://github.com/PriyaKsagar2/Pixel6_task_CustomerDataManager/blob/master/readme%20images/localhost_3000_.png)
+
+<br>
+
+#### Customer details list:
+![Image 2](https://github.com/PriyaKsagar2/Pixel6_task_CustomerDataManager/blob/master/readme%20images/Screenshot%20(1957).png)
+
+<br>
+
+#### Editing features:
+![Image 3](https://github.com/PriyaKsagar2/Pixel6_task_CustomerDataManager/blob/master/readme%20images/Screenshot%20(1958).png)
 
 <hr>
 
