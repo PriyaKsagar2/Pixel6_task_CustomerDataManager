@@ -1,3 +1,13 @@
+<div align="center">
+    <h1 align="center">Customer Data Manager</h1>
+  <p align="center">
+    A CRUD app made using React JS
+    <br />
+    </p>
+</div>
+
+# Customer Form, Details list and Edit feature
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
