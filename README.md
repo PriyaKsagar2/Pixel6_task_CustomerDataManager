@@ -8,6 +8,8 @@
 
 ### Customer details, Customer details list, and Edit features
 
+<hr>
+
 #### Customer details form:
 ![Image 1](https://github.com/PriyaKsagar2/Pixel6_task_CustomerDataManager/blob/master/readme%20images/localhost_3000_.png)
 
@@ -62,8 +64,8 @@ This customer data management project is a React-based web application designed 
 7. **Deployment**:
    - Hosted on Vercel for easy access and management.
 
-<br>
-<br>
+<hr>
+<hr>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
